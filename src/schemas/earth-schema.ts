@@ -9,7 +9,7 @@ const terraSchema = z.object({
         state: z.any(),
         country: z.any(),
         city: z.string().min(2, "Cidade inválida"),
-        zipCode: z.string().regex(/^\d{5}-\d{3}$/, "CEP inválido. Use o formato 00000-000"),
+        zipCode: z.string().regex(/^\d{5}\d{3}$/, "CEP inválido. Use o formato 00000-000"),
 });
 
 export default terraSchema
